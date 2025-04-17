@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+.urbanist-400 {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.urbanist-400-b {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+:root {
+  /* Spacing */
+  --spacing-98: 25rem;
+  --spacing-99: 22rem;
+  --spacing-100: 28rem;
+  --spacing-110: 28.5rem;
+  --spacing-111: 28.9rem;
+  --spacing-120: 30rem;
+  --spacing-122: 31rem;
+  --spacing-128: 32rem;
+  --spacing-130: 34rem;
+  --spacing-134: 35.6rem;
+  --spacing-135: 39.4rem;
+  --spacing-160: 40rem;
+  --spacing-165: 43rem;
+  --spacing-168: 44rem;
+  --spacing-170: 43.5rem;
+  --spacing-192: 48rem;
+  --spacing-224: 56rem;
+  --spacing-256: 64rem;
+  --spacing-260: 75rem;
+  --spacing-300: 94rem;
+  --spacing-301: 97.5rem;
+
+  /* Font Sizes */
+  --font-size-10xl: 10rem;
+  --font-size-11xl: 11rem;
+  --font-size-12xl: 20rem;
+  --font-size-15xl: 40rem;
+  --font-size-20xl: 56rem;
+  --font-size-22xl: 64rem;
+
+  /* Colors - Primary */
+  --color-primary-50: #FFF5F2;
+  --color-primary-100: #FFF1EE;
+  --color-primary-200: #FFE4DE;
+  --color-primary-300: #FFD5CC;
+  --color-primary-400: #FFBCAD;
+  --color-primary-500: #FE795D;
+  --color-primary-600: #EF562F;
+  --color-primary-700: #EB4F27;
+  --color-primary-800: #CC4522;
+  --color-primary-900: #A5371B;
+}
+
+@layer utilities {
+  /* Font Sizes */
+  .text-10xl { font-size: var(--font-size-10xl); }
+  .text-11xl { font-size: var(--font-size-11xl); }
+  .text-12xl { font-size: var(--font-size-12xl); }
+  .text-15xl { font-size: var(--font-size-15xl); }
+  .text-20xl { font-size: var(--font-size-20xl); }
+  .text-22xl { font-size: var(--font-size-22xl); }
+
+  /* Widths */
+  .w-128 { width: var(--spacing-128); }
+  .w-160 { width: var(--spacing-160); }
+  .w-192 { width: var(--spacing-192); }
+  .w-224 { width: var(--spacing-224); }
+  .w-256 { width: var(--spacing-256); }
+
+  /* Heights */
+  .h-128 { height: var(--spacing-128); }
+  .h-160 { height: var(--spacing-160); }
+  .h-170 { height: var(--spacing-170); }
+  .h-192 { height: var(--spacing-192); }
+  .h-224 { height: var(--spacing-224); }
+  .h-256 { height: var(--spacing-256); }
+
+  /* Custom Spacing Classes (padding/margin/etc.) */
+  .p-98 { padding: var(--spacing-98); }
+  .p-99 { padding: var(--spacing-99); }
+  .p-100 { padding: var(--spacing-100); }
+  .p-110 { padding: var(--spacing-110); }
+  .p-111 { padding: var(--spacing-111); }
+  .p-120 { padding: var(--spacing-120); }
+  .p-122 { padding: var(--spacing-122); }
+  .p-130 { padding: var(--spacing-130); }
+  .p-134 { padding: var(--spacing-134); }
+  .p-135 { padding: var(--spacing-135); }
+  .p-165 { padding: var(--spacing-165); }
+  .p-168 { padding: var(--spacing-168); }
+  .p-170 { padding: var(--spacing-170); }
+  .p-260 { padding: var(--spacing-260); }
+  .p-300 { padding: var(--spacing-300); }
+  .p-301 { padding: var(--spacing-301); }
+
+  /* Custom Color Utilities */
+  .text-primary-50 { color: var(--color-primary-50); }
+  .text-primary-100 { color: var(--color-primary-100); }
+  .text-primary-200 { color: var(--color-primary-200); }
+  .text-primary-300 { color: var(--color-primary-300); }
+  .text-primary-400 { color: var(--color-primary-400); }
+  .text-primary-500 { color: var(--color-primary-500); }
+  .text-primary-600 { color: var(--color-primary-600); }
+  .text-primary-700 { color: var(--color-primary-700); }
+  .text-primary-800 { color: var(--color-primary-800); }
+  .text-primary-900 { color: var(--color-primary-900); }
+
+  .bg-primary-50 { background-color: var(--color-primary-50); }
+  .bg-primary-100 { background-color: var(--color-primary-100); }
+  .bg-primary-200 { background-color: var(--color-primary-200); }
+  .bg-primary-300 { background-color: var(--color-primary-300); }
+  .bg-primary-400 { background-color: var(--color-primary-400); }
+  .bg-primary-500 { background-color: var(--color-primary-500); }
+  .bg-primary-600 { background-color: var(--color-primary-600); }
+  .bg-primary-700 { background-color: var(--color-primary-700); }
+  .bg-primary-800 { background-color: var(--color-primary-800); }
+  .bg-primary-900 { background-color: var(--color-primary-900); }
+}
+
+@layer utilities {
+  .text-12xl {
+    font-size: 20rem;
+  }
+
+  .ml-112 {
+    margin-left: 28rem;
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:text-12xl {
+      font-size: 20rem;
+    }
+
+    .lg\:ml-112 {
+      margin-left: 28rem;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .sm\:text-12xl {
+      font-size: 20rem;
+    }
+
+    .sm\:ml-112 {
+      margin-left: 28rem;
+    }
+  }
+}
+
+@theme inline {
+  --shadow-input:
+    0px 2px 3px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+}
