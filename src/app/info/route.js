@@ -43,15 +43,7 @@ export async function POST(req) {
             contents: `Generate a LaTeX resume using this JSON: ${JSON.stringify(userInfo)}. Keep it minimal, clean, and include name, email, GitHub, summary, location, and a projects section sorted by date, I need experience, eduation, projects and achievements section. Please don't include any explaination or Improvements just return latex.`,
           });
         const latexContent = response.candidates[0].content.parts[0].text;
-        fs.writeFile('output.txt', latexContent, () => {
-            if(err){
-                console.log("Error writing to the file");
-            }
-            else{
-                console.log("Sucessfully written to the file");
-            }
-        })
-        return new Response(JSON.stringify({"message": "Latex successfully generated!"}),
+        return new Response(JSON.stringify(latexContent),
                     {
                         status: 200,
                         headers: {
