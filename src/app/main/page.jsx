@@ -17,7 +17,7 @@ export default function Main() {
   const [info, setInfo] = useState('');
 
   const reqFunction = async () => {
-    const sendReq = await fetch("http://localhost:3000/info", {
+    const sendReq = await fetch("https://resumer-henna.vercel.app/info", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
