@@ -40,7 +40,7 @@ export async function POST(req) {
         }
         const response = await ai.models.generateContent({
             model: "gemini-2.0-flash",
-            contents: `Generate a LaTeX resume using this JSON: ${JSON.stringify(userInfo)}. Keep it minimal, clean, and include name, email, GitHub, summary, location, and a projects section sorted by date, I need experience, eduation, projects and achievements section. Please don't include any explaination or Improvements just return latex. Include \begin{document} and all such synatx properly i have to cconvert it to a pdf file`,
+            contents: `Generate a LaTeX resume using this JSON: ${JSON.stringify(userInfo)}. Keep it minimal, clean, and include name, email, GitHub, summary, location, and a projects section sorted by date, I need experience, eduation, projects and achievements section. Please don't include any explaination or Improvements just return latex. Include begin{document} and all such synatx properly i have to cconvert it to a pdf file`,
           });
         const latexContent = response.candidates[0].content.parts[0].text;
         return new Response(JSON.stringify(latexContent),
