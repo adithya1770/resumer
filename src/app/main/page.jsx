@@ -33,7 +33,7 @@ export default function Main() {
     const url = URL.createObjectURL(blob);
     const element = document.createElement('a')
     element.href=url;
-    element.download = "Resume.txt";
+    element.download = "Resume.tex";
     element.click();
   }
 
